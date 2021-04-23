@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """ Accuracy with TensorFlow """
 import tensorflow as tf
+
+
+
 def calculate_accuracy(y, y_pred):
     """
     y is a placeholder for the labels of the input data
