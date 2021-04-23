@@ -7,11 +7,11 @@ import tensorflow as tf
 
 def calculate_accuracy(y, y_pred):
     """
-    a function that calculates the accuracy of a prediction
-    :param y: a placeholders with the right labels of the input data
-    :param y_pred: tensor containing the network's predictions
-    :return: a tensor containing the decimal accuracy of the prediction
+     a function that calculates the accuracy of a prediction
+     y placeholders with the right labels of the input data
+     y_pred tensor containing the network's predictions
+     return tensor containing the decimal accuracy of the prediction
     """
-    accuracy = tf.equal(tf.argmax(y, 1), tf.argmax(y_pred, 1))
-    mean = tf.reduce_mean(tf.cast(accuracy, tf.float32))
-    return mean
+    ca = tf.equal(tf.argmax(y, 1), tf.argmax(y_pred, 1))
+    res = tf.reduce_mean(tf.cast(ca, tf.float32))
+    return res
