@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
-""" Accuracy with TensorFlow """
+"""
+Module to calculate accuracy of prediction
+"""
 import tensorflow as tf
-
 
 
 def calculate_accuracy(y, y_pred):
     """
-    y is a placeholder for the labels of the input data
-    y_pred is a tensor containing the network’s predictions
-    Returns: a tensor containing the decimal accuracy of the prediction
+    a function that calculates the accuracy of a prediction
+    :param y: a placeholders with the right labels of the input data
+    :param y_pred: tensor containing the network's predictions
+    :return: a tensor containing the decimal accuracy of the prediction
     """
     accuracy = tf.equal(tf.argmax(y, 1), tf.argmax(y_pred, 1))
-    a = tf.reduce_mean(tf.cast(c_p, tf.float32))
-    return a
+    mean = tf.reduce_mean(tf.cast(accuracy, tf.float32))
+    return mean
